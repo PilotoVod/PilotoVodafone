@@ -42,8 +42,17 @@ explore: nivel_1_1 {
   }
 }
 
-explore: nivel_3 {}
+explore: nivel_3 {
+  label: "(4) Nivel 3"
+  view_name:  nivel_3
+}
 
-explore: operation {}
+explore: operation {
+  label: "(5) Operation"
+  view_name:  operation
+}
 
-explore: system {}
+explore: system {
+  label: "(6) System"
+  view_name:  system
+}
