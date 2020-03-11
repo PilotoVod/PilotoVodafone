@@ -29,6 +29,23 @@ explore: logado {
   label: "(1) Logado"
   view_name:  logado
 
+  join: operation {
+    view_label: "Dimensión operación"
+    relationship: one_to_one
+    sql_on: ${operation.idoperation} = ${logado.idoperation} ;;
+  }
+
+  join: client_type {
+    view_label: "Dimensión tipo cliente"
+    relationship: one_to_one
+    sql_on: ${client_type.idclienttype} = ${logado.clienttype} ;;
+  }
+
+  join:  system{
+    view_label: "Dimensión sistema"
+    relationship: one_to_one
+    sql_on: ${system.idsystem} = ${logado.idsystem} ;;
+  }
 }
 
 explore: nivel_1_1 {
