@@ -9,80 +9,6 @@
     tile_text_color: "#000000"
     text_tile_text_color: "#ffffff"
   elements:
-  - title: Desglose Resultados
-    name: Desglose Resultados
-    model: modelo_vodafone
-    explore: nivel_1_1
-    type: looker_bar
-    fields: [operation.namet, nivel_1_1.ConteoTotal, nivel_1_1.Conteo_OK, nivel_1_1.Conteo_KO_T,
-      nivel_1_1.Conteo_KO_F]
-    sorts: [nivel_1_1.ConteoTotal desc]
-    limit: 500
-    query_timezone: America/Los_Angeles
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: true
-    legend_position: right
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: desc
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#000000"
-    color_application:
-      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
-      options:
-        steps: 5
-    y_axes: [{label: Número de operaciones, orientation: bottom, series: [{axisId: nivel_1_1.Conteo_OK,
-            id: nivel_1_1.Conteo_OK, name: OK}, {axisId: nivel_1_1.Conteo_KO_F, id: nivel_1_1.Conteo_KO_F,
-            name: KO Funcional}, {axisId: nivel_1_1.Conteo_KO_T, id: nivel_1_1.Conteo_KO_T,
-            name: KO Técnico}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear}]
-    x_axis_label: Operación
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    font_size: 16px,
-    series_types: {}
-    series_colors:
-      nivel_1_1.Conteo_OK: "#72D16D"
-      nivel_1_1.Conteo_KO_F: "#cf1e0f"
-      nivel_1_1.Conteo_KO_T: "#FBB555"
-    series_labels:
-      nivel_1_1.Conteo_OK: OK
-      nivel_1_1.Conteo_KO_F: KO Funcional
-      nivel_1_1.Conteo_KO_T: KO Técnico
-    trend_lines: []
-    column_group_spacing_ratio: 0.4
-    defaults_version: 1
-    hidden_fields: [nivel_1_1.ConteoTotal]
-    listen:
-      Intervalo fecha: nivel_1_1.fecha_date
-      Tipo cliente: client_type.namet
-      Sistema: system.namet
-    row: 4
-    col: 10
-    width: 14
-    height: 6
   - title: Estado de Operaciones
     name: Estado de Operaciones
     model: modelo_vodafone
@@ -193,6 +119,80 @@
     col: 5
     width: 19
     height: 4
+  - title: Desglose Resultados
+    name: Desglose Resultados
+    model: modelo_vodafone
+    explore: nivel_1_1
+    type: looker_bar
+    fields: [operation.namet, nivel_1_1.ConteoTotal, nivel_1_1.Conteo_OK, nivel_1_1.Conteo_KO_T,
+      nivel_1_1.Conteo_KO_F]
+    sorts: [nivel_1_1.ConteoTotal desc]
+    limit: 500
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: true
+    legend_position: right
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: desc
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#000000"
+    color_application:
+      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
+      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
+      options:
+        steps: 5
+    y_axes: [{label: Número de operaciones, orientation: bottom, series: [{axisId: nivel_1_1.Conteo_OK,
+            id: nivel_1_1.Conteo_OK, name: OK}, {axisId: nivel_1_1.Conteo_KO_F, id: nivel_1_1.Conteo_KO_F,
+            name: KO Funcional}, {axisId: nivel_1_1.Conteo_KO_T, id: nivel_1_1.Conteo_KO_T,
+            name: KO Técnico}], showLabels: true, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear}]
+    x_axis_label: Operación
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    font_size: 16px,
+    series_types: {}
+    series_colors:
+      nivel_1_1.Conteo_OK: "#72D16D"
+      nivel_1_1.Conteo_KO_F: "#cf1e0f"
+      nivel_1_1.Conteo_KO_T: "#FBB555"
+    series_labels:
+      nivel_1_1.Conteo_OK: OK
+      nivel_1_1.Conteo_KO_F: KO Funcional
+      nivel_1_1.Conteo_KO_T: KO Técnico
+    trend_lines: []
+    column_group_spacing_ratio: 0.4
+    defaults_version: 1
+    hidden_fields: [nivel_1_1.ConteoTotal]
+    listen:
+      Intervalo fecha: nivel_1_1.fecha_date
+      Tipo cliente: client_type.namet
+      Sistema: system.namet
+    row: 4
+    col: 10
+    width: 14
+    height: 10
   filters:
   - name: Intervalo fecha
     title: Intervalo fecha
