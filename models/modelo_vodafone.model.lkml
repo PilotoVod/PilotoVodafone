@@ -20,7 +20,6 @@ explore: client_type {
     relationship: one_to_one
     sql_on: ${nivel_1_1.clienttype} = ${client_type.idclienttype} ;;
   }
-
 }
 
 #explore: connection_reg_r3 {}
