@@ -9,8 +9,8 @@
     tile_text_color: "#000000"
     text_tile_text_color: "#ffffff"
   elements:
-  - name: Desglose Resultados
-    title: Desglose Resultados
+  - title: Desglose Resultados
+    name: Desglose Resultados
     model: modelo_vodafone
     explore: nivel_1_1
     type: looker_bar
@@ -83,13 +83,12 @@
     col: 10
     width: 14
     height: 6
-  - name: Estado de Operaciones
-    title: Estado de Operaciones
+  - title: Estado de Operaciones
+    name: Estado de Operaciones
     model: modelo_vodafone
     explore: nivel_1_1
     type: looker_grid
     fields: [operation.namet, nivel_1_1.ConteoTotal, nivel_1_1.Conteo_KO_F, nivel_1_1.Conteo_KO_T]
-    filters: {}
     sorts: [nivel_1_1.ConteoTotal desc]
     limit: 500
     dynamic_fields: [{table_calculation: ko_funcional_frente_a_total_de_operaciones,
@@ -185,10 +184,9 @@
     col: 0
     width: 5
     height: 4
-  - name: TOP-10 de Operaciones más ejecutadas
+  - name: <b><font color="DimGrey" size="7">TOP-10 de Operaciones más ejecutadas</font></b>
     type: text
-    title_text: TOP-10 de Operaciones más ejecutadas
-    font-weight: bold
+    title_text: <b><font color="DimGrey" size="7">TOP-10 de Operaciones más ejecutadas</font></b>
     subtitle_text: ''
     body_text: ''
     row: 0
