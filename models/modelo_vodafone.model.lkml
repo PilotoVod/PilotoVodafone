@@ -54,4 +54,10 @@ explore: operation {
 explore: system {
   label: "(6) System"
   view_name:  system
+
+  join: nivel_1_1 {
+    view_label: "System"
+    relationship: one_to_one
+    sql_on: ${nivel_1_1.idsystem} = ${system.idsystem} ;;
+  }
 }
