@@ -64,7 +64,7 @@
     show_null_points: true
     interpolation: linear
     defaults_version: 1
-    row: 8
+    row: 12
     col: 0
     width: 11
     height: 7
@@ -116,7 +116,7 @@
     defaults_version: 1
     series_types: {}
     hidden_fields: [nivel_1_1.fecha_date]
-    row: 2
+    row: 6
     col: 0
     width: 8
     height: 6
@@ -188,7 +188,7 @@
     header_text_alignment: left
     header_font_size: 12
     rows_font_size: 12
-    row: 5
+    row: 9
     col: 8
     width: 3
     height: 3
@@ -260,7 +260,7 @@
     header_text_alignment: left
     header_font_size: 12
     rows_font_size: 12
-    row: 2
+    row: 6
     col: 8
     width: 3
     height: 3
