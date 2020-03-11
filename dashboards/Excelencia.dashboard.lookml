@@ -2,12 +2,12 @@
   title: Excelencia Operativa - Nivel 1
   layout: newspaper
   embed_style:
-    background_color: ''
+    background_color: "#ffffff"
     show_title: true
     title_color: "#000000"
     show_filters_bar: true
     tile_text_color: "#000000"
-    text_tile_text_color: ''
+    text_tile_text_color: "#ffffff"
   elements:
   - name: Desglose Resultados
     title: Desglose Resultados
