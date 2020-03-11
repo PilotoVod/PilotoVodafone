@@ -73,6 +73,8 @@ explore: nivel_1_1 {
 
   join: leyenda {
     view_label: "Leyenda"
+    type: cross
+    relationship: many_to_many
   }
 
 }
