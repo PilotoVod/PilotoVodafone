@@ -9,34 +9,60 @@
     tile_text_color: "#3a4245"
     text_tile_text_color: ''
   elements:
-  - title: Numero de clientes
-    name: Numero de clientes
+  - name: ''
+    type: text
+    body_text: <img src="https://www.4gdekking.nl/wp-content/uploads/2014/10/vodafone_logo-300x120.jpg"
+      />
+    row: 0
+    col: 0
+    width: 5
+    height: 4
+  - name: <b><font color="DimGrey">Resumen día actual</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
+    body_text: ''
+    row: 4
+    col: 0
+    width: 11
+    height: 2
+  - name: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
+    body_text: ''
+    row: 12
+    col: 0
+    width: 11
+    height: 2
+  - name: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
+    type: text
+    title_text: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
+    subtitle_text: ''
+    body_text: ''
+    row: 0
+    col: 5
+    width: 19
+    height: 4
+  - title: Desglose por estados
+    name: Desglose por estados
     model: modelo_vodafone
     explore: nivel_1_1
-    type: single_value
-    fields: [nivel_1_1.fecha_date, client_type.namet]
+    type: looker_pie
+    fields: [nivel_1_1.fecha_date, nivel_1_1.tipo_error, nivel_1_1.ConteoTotal]
     filters:
-      nivel_1_1.fecha_date: 2020/02/20
+      nivel_1_1.fecha_date: '2020-02-20'
     sorts: [nivel_1_1.fecha_date desc]
     limit: 500
-    dynamic_fields: [{table_calculation: numero_de_clientes, label: Número de clientes,
-        expression: 'count(count_distinct(${client_type.namet}))', value_format: !!null '',
-        value_format_name: !!null '', _kind_hint: dimension, _type_hint: number}]
     query_timezone: America/Los_Angeles
-    custom_color_enabled: true
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    color_application:
-      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
-    single_value_title: Tipos de cliente
-    comparison_label: Tipos totales de cliente
+    value_labels: legend
+    label_type: labPer
+    inner_radius: 48
+    series_colors:
+      OK: "#72D16D"
+      KO-F: "#cf1e0f"
+      KO-T: "#FBB555"
+    series_labels:
+      KO-F: KO Funcional
+      KO-T: KO Técnico
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -59,29 +85,17 @@
     label_density: 25
     x_axis_scale: auto
     y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
+    show_null_points: true
+    interpolation: linear
     defaults_version: 1
-    hidden_fields: [client_type.namet, nivel_1_1.fecha_date]
     series_types: {}
-    show_row_numbers: true
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: white
-    header_text_alignment: left
-    header_font_size: 12
-    rows_font_size: 12
-    listen: {}
-    row: 9
-    col: 8
-    width: 3
-    height: 3
+    hidden_fields: [nivel_1_1.fecha_date]
+    listen:
+      Operación: operation.namet
+    row: 6
+    col: 0
+    width: 8
+    height: 6
   - title: Número de sistemas
     name: Número de sistemas
     model: modelo_vodafone
@@ -150,40 +164,41 @@
     header_text_alignment: left
     header_font_size: 12
     rows_font_size: 12
-    listen: {}
+    listen:
+      Operación: operation.namet
+      Sistema: system.namet
     row: 6
     col: 8
     width: 3
     height: 3
-  - name: ''
-    type: text
-    body_text: <img src="https://www.4gdekking.nl/wp-content/uploads/2014/10/vodafone_logo-300x120.jpg"
-      />
-    row: 0
-    col: 0
-    width: 5
-    height: 4
-  - title: Desglose por estados
-    name: Desglose por estados
+  - title: Numero de clientes
+    name: Numero de clientes
     model: modelo_vodafone
     explore: nivel_1_1
-    type: looker_pie
-    fields: [nivel_1_1.fecha_date, nivel_1_1.tipo_error, nivel_1_1.ConteoTotal]
+    type: single_value
+    fields: [nivel_1_1.fecha_date, client_type.namet]
     filters:
-      nivel_1_1.fecha_date: '2020-02-20'
+      nivel_1_1.fecha_date: 2020/02/20
     sorts: [nivel_1_1.fecha_date desc]
     limit: 500
+    dynamic_fields: [{table_calculation: numero_de_clientes, label: Número de clientes,
+        expression: 'count(count_distinct(${client_type.namet}))', value_format: !!null '',
+        value_format_name: !!null '', _kind_hint: dimension, _type_hint: number}]
     query_timezone: America/Los_Angeles
-    value_labels: legend
-    label_type: labPer
-    inner_radius: 48
-    series_colors:
-      OK: "#72D16D"
-      KO-F: "#cf1e0f"
-      KO-T: "#FBB555"
-    series_labels:
-      KO-F: KO Funcional
-      KO-T: KO Técnico
+    custom_color_enabled: true
+    show_single_value_title: true
+    show_comparison: false
+    comparison_type: value
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    color_application:
+      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
+      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
+    single_value_title: Tipos de cliente
+    comparison_label: Tipos totales de cliente
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -206,24 +221,31 @@
     label_density: 25
     x_axis_scale: auto
     y_axis_combined: true
-    show_null_points: true
-    interpolation: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
     defaults_version: 1
+    hidden_fields: [client_type.namet, nivel_1_1.fecha_date]
     series_types: {}
-    hidden_fields: [nivel_1_1.fecha_date]
-    listen: {}
-    row: 6
-    col: 0
-    width: 8
-    height: 6
-  - name: <b><font color="DimGrey">Resumen día actual</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
-    body_text: ''
-    row: 4
-    col: 0
-    width: 11
-    height: 2
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    header_text_alignment: left
+    header_font_size: 12
+    rows_font_size: 12
+    listen:
+      Operación: operation.namet
+      Tipo cliente: client_type.namet
+    row: 9
+    col: 8
+    width: 3
+    height: 3
   - title: Histórico de ejecuciones
     name: Histórico de ejecuciones
     model: modelo_vodafone
@@ -280,29 +302,26 @@
     interpolation: linear
     defaults_version: 1
     title_hidden: true
-    listen: {}
+    listen:
+      Operación: operation.namet
+      Intervalo fecha: nivel_1_1.fecha_date
+      Tipo cliente: client_type.namet
+      Sistema: system.namet
     row: 14
     col: 0
     width: 11
     height: 7
-  - name: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
-    body_text: ''
-    row: 12
-    col: 0
-    width: 11
-    height: 2
-  - name: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
-    type: text
-    title_text: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
-    subtitle_text: ''
-    body_text: ''
-    row: 0
-    col: 5
-    width: 19
-    height: 4
-    filters:
+  filters:
+  - name: Operación
+    title: Operación
+    type: field_filter
+    default_value: B-ACTMIPAISR6
+    allow_multiple_values: false
+    required: true
+    model: modelo_vodafone
+    explore: nivel_1_1
+    listens_to_filters: []
+    field: operation.namet
   - name: Intervalo fecha
     title: Intervalo fecha
     type: field_filter
@@ -311,7 +330,7 @@
     required: false
     model: modelo_vodafone
     explore: nivel_1_1
-    listens_to_filters: []
+    listens_to_filters: [Operación]
     field: nivel_1_1.fecha_date
   - name: Tipo cliente
     title: Tipo cliente
@@ -321,7 +340,7 @@
     required: false
     model: modelo_vodafone
     explore: nivel_1_1
-    listens_to_filters: [Intervalo fecha]
+    listens_to_filters: [Intervalo fecha, Operación]
     field: client_type.namet
   - name: Sistema
     title: Sistema
@@ -331,5 +350,5 @@
     required: false
     model: modelo_vodafone
     explore: nivel_1_1
-    listens_to_filters: [Intervalo fecha]
+    listens_to_filters: [Intervalo fecha, Operación]
     field: system.namet
