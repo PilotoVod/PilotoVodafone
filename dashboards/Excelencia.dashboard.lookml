@@ -188,6 +188,7 @@
   - name: TOP-10 de Operaciones más ejecutadas
     type: text
     title_text: TOP-10 de Operaciones más ejecutadas
+    font-weight: bold
     subtitle_text: ''
     body_text: ''
     row: 0
