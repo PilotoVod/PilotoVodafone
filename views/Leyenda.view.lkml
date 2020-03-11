@@ -9,8 +9,7 @@ view: leyenda {
 
   dimension: verde {
     type: string
-    sql: ${TABLE}.verde
-    html: 🟢;;
+    sql: ${TABLE}.verde;;
   }
 
   dimension: amarillo {
