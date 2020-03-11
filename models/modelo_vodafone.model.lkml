@@ -3,7 +3,8 @@ label: "2) Piloto Vodafone"
 
 # include all the views
 include: "/views/**/*.view"
-#include: "*.dashboard" # include all the dashboards
+#include: "/dashboard/**/*.dashboard" # include all the dashboards
+include: "/dashboards/**/*.dashboard"
 
 datagroup: modelo_vodafone_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
