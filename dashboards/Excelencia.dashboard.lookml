@@ -193,6 +193,86 @@
     col: 10
     width: 14
     height: 10
+  - name: Leyenda
+    title: Leyenda
+    model: modelo_vodafone
+    explore: nivel_1_1
+    type: looker_grid
+    fields: [leyenda.error, leyenda.verde, leyenda.amarillo, leyenda.rojo]
+    sorts: [leyenda.verde desc]
+    limit: 500
+    query_timezone: America/Los_Angeles
+    show_view_names: false
+    show_row_numbers: false
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: editable
+    limit_displayed_rows: false
+    enable_conditional_formatting: true
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    pinned_columns:
+      leyenda.error: left
+      leyenda.rojo: left
+    column_order: [leyenda.error, leyenda.rojo, leyenda.amarillo, leyenda.verde]
+    show_totals: true
+    show_row_totals: true
+    series_labels:
+      leyenda.verde: "\U0001f534"
+      leyenda.amarillo: "\U0001f7e1"
+      leyenda.rojo: "\U0001f7e2"
+    series_text_format:
+      leyenda.error:
+        fg_color: "#000000"
+        align: left
+      leyenda.verde:
+        fg_color: "#000000"
+        align: left
+      leyenda.rojo:
+        fg_color: "#000000"
+      leyenda.amarillo:
+        fg_color: "#000000"
+    header_font_color: "#000000"
+    header_background_color: "#ffd2d2"
+    conditional_formatting: []
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    defaults_version: 1
+    series_types: {}
+    row: 10
+    col: 0
+    width: 10
+    height: 4
   filters:
   - name: Intervalo fecha
     title: Intervalo fecha
