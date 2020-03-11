@@ -199,7 +199,7 @@
     explore: nivel_1_1
     type: looker_grid
     fields: [leyenda.error, leyenda.verde, leyenda.amarillo, leyenda.rojo]
-    sorts: [leyenda.verde desc]
+    sorts: [leyenda.amarillo desc]
     limit: 500
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -220,8 +220,8 @@
     show_sql_query_menu_options: false
     pinned_columns:
       leyenda.error: left
-      leyenda.rojo: left
-    column_order: [leyenda.error, leyenda.rojo, leyenda.amarillo, leyenda.verde]
+      leyenda.verde: left
+    column_order: [leyenda.error, leyenda.verde, leyenda.amarillo, leyenda.rojo]
     show_totals: true
     show_row_totals: true
     series_labels:
