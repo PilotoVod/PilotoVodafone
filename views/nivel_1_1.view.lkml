@@ -11,13 +11,20 @@ view: nivel_1_1 {
     sql: ${TABLE}.DESC_ERROR ;;
   }
 
-  dimension: fecha {
-    type: date_time
-    sql: ${TABLE}.FECHA ;;
+ # dimension: fecha {
+#  type: date
+#   sql: ${TABLE}.FECHA ;;
+# }
+
+  dimension_group: fecha {
+  type: time
+  #timeframes: [date, week, month, year]
+  datatype: yyyymmdd
+  sql: ${TABLE}.FECHA;;
   }
 
   dimension: idoperation {
-    type: number
+    type: string
     sql: ${TABLE}.IDOPERATION ;;
   }
 
