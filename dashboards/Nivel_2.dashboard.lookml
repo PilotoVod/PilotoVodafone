@@ -315,7 +315,7 @@
   - name: Operación
     title: Operación
     type: field_filter
-    default_value: B-ACTMIPAISR6
+    default_value: I-CONIDSCLIENTEAMD
     allow_multiple_values: false
     required: true
     model: modelo_vodafone
