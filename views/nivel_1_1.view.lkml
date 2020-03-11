@@ -12,7 +12,7 @@ view: nivel_1_1 {
   }
 
   dimension: fecha {
-    type: number
+    type: date
     sql: ${TABLE}.FECHA ;;
   }
 
