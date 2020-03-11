@@ -3,7 +3,7 @@ view: leyenda {
 
   dimension: error {
     type: string
-    sql: ${TABLE}.Error
+    sql: ${TABLE}.Error;;
 
   }
 
