@@ -71,10 +71,6 @@ explore: nivel_1_1 {
     sql_on: ${system.idsystem} = ${nivel_1_1.idsystem} ;;
   }
 
-  join: circulos{
-    view_label: "Circulos"
-
-  }
 
 
 }
