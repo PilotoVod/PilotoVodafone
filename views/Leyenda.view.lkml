@@ -9,22 +9,19 @@ view: leyenda {
 
   dimension: verde {
     type: string
-    sql: ${TABLE}.verde
-    html: 🟢;;
+    sql: ${TABLE}.verde;;
   }
 
   dimension: amarillo {
     type: string
-    sql: ${TABLE}.amarillo
-    html: 🟡;;
+    sql: ${TABLE}.amarillo;;
   }
 
 
 
   dimension: rojo {
     type: string
-    sql: ${TABLE}.rojo
-    html: 🔴;;
+    sql: ${TABLE}.rojo;;
   }
 
   measure: count {
