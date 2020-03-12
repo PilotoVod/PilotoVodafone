@@ -32,19 +32,19 @@ explore: logado {
 
   join: operation {
     view_label: "Dimensión operación"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${operation.idoperation} = ${logado.idoperation} ;;
   }
 
   join: client_type {
     view_label: "Dimensión tipo cliente"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${client_type.idclienttype} = ${logado.clienttype} ;;
   }
 
   join:  system{
     view_label: "Dimensión sistema"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${system.idsystem} = ${logado.idsystem} ;;
   }
 }
@@ -55,19 +55,19 @@ explore: nivel_1_1 {
 
   join: operation {
     view_label: "Dimensión operación"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${operation.idoperation} = ${nivel_1_1.idoperation} ;;
      }
 
   join: client_type {
     view_label: "Dimensión tipo cliente"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${client_type.idclienttype} = ${nivel_1_1.clienttype} ;;
   }
 
   join:  system{
     view_label: "Dimensión sistema"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${system.idsystem} = ${nivel_1_1.idsystem} ;;
   }
 
@@ -85,19 +85,19 @@ explore: nivel_3 {
 
   join: operation {
     view_label: "Dimensión operación"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${operation.idoperation} = ${nivel_3.idoperation} ;;
   }
 
   join: client_type {
     view_label: "Dimensión tipo cliente"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${client_type.idclienttype} = ${nivel_3.clienttype} ;;
   }
 
   join:  system{
     view_label: "Dimensión sistema"
-    relationship: one_to_one
+    relationship: many_to_one
     sql_on: ${system.idsystem} = ${nivel_3.idsystem} ;;
   }
 }
