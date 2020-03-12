@@ -26,6 +26,15 @@
     col: 5
     width: 19
     height: 4
+  - name: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
+    subtitle_text: No afectado por el filtro de intervalo de fechas
+    body_text: ''
+    row: 4
+    col: 0
+    width: 11
+    height: 1
   - name: Tiempo medio (segundos)
     title: Tiempo medio (segundos)
     model: modelo_vodafone
@@ -101,6 +110,15 @@
     col: 0
     width: 14
     height: 9
+  - name: <b><font color="DimGrey">Disponibilidad técnica</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Disponibilidad técnica</font></b>
+    subtitle_text: ''
+    body_text: ''
+    row: 4
+    col: 11
+    width: 13
+    height: 1
   - name: Disponibilidad técnica
     title: Disponibilidad técnica
     model: modelo_vodafone
@@ -150,6 +168,14 @@
     col: 14
     width: 10
     height: 4
+  - name: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
+    body_text: ''
+    row: 12
+    col: 0
+    width: 11
+    height: 1
   - name: Errores técnicos frente a total
     title: Errores técnicos frente a total
     model: modelo_vodafone
