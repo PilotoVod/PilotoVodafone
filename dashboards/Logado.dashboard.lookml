@@ -1,5 +1,5 @@
-- dashboard: logado_imported
-  title: Logado (imported)
+- dashboard: logado
+  title: Logado
   layout: newspaper
   embed_style:
     background_color: "#fcffff"
