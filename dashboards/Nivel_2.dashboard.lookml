@@ -1,5 +1,5 @@
-- dashboard: nivel_2
-  title: Nivel 2
+- dashboard: excelencia_operativa__nivel_2
+  title: Excelencia Operativa - Nivel 2
   layout: newspaper
   embed_style:
     background_color: "#fcffff"
@@ -17,14 +17,6 @@
     col: 0
     width: 5
     height: 4
-  - name: <b><font color="DimGrey">Resumen día actual</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
-    body_text: ''
-    row: 4
-    col: 0
-    width: 11
-    height: 2
   - name: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
     type: text
     title_text: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
@@ -246,6 +238,15 @@
     col: 8
     width: 3
     height: 3
+  - name: <b><font color="DimGrey">Resumen día actual</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
+    subtitle_text: No afectado por el filtro de intervalo de fechas
+    body_text: ''
+    row: 4
+    col: 0
+    width: 11
+    height: 2
   - title: Histórico de ejecuciones
     name: Histórico de ejecuciones
     model: modelo_vodafone
@@ -310,6 +311,123 @@
     row: 14
     col: 0
     width: 11
+    height: 7
+  - name: Top-5 Errores funcionales
+    title: Top-5 Errores funcionales
+    model: modelo_vodafone
+    explore: nivel_1_1
+    type: looker_bar
+    fields: [nivel_1_1.desc_error, nivel_1_1.count]
+    filters:
+      nivel_1_1.tipo_error: KO-F
+    sorts: [nivel_1_1.count desc]
+    limit: 500
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    x_axis_label: Descripción del error
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '5'
+    series_types: {}
+    series_colors:
+      nivel_1_1.count: "#cf1e0f"
+    series_labels:
+      nivel_1_1.Conteo_KO_F: Números de errores funcionales
+      nivel_1_1.count: Número de errores
+    column_group_spacing_ratio: 0.3
+    defaults_version: 1
+    hidden_fields: []
+    title_hidden: true
+    listen: {}
+    row: 4
+    col: 11
+    width: 10
+    height: 8
+  - name: Top-5 Errores técnicos
+    title: Top-5 Errores técnicos
+    model: modelo_vodafone
+    explore: nivel_1_1
+    type: looker_bar
+    fields: [nivel_1_1.desc_error, nivel_1_1.count]
+    filters:
+      nivel_1_1.tipo_error: KO-T
+      nivel_1_1.desc_error: "-NULL"
+    sorts: [nivel_1_1.count desc]
+    limit: 500
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    x_axis_label: Descripción del error
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '5'
+    series_types: {}
+    series_colors:
+      nivel_1_1.count: "#FBB555"
+    series_labels:
+      nivel_1_1.Conteo_KO_F: Números de errores funcionales
+      nivel_1_1.count: Número de errores
+    column_group_spacing_ratio: 0.3
+    defaults_version: 1
+    hidden_fields: []
+    title_hidden: true
+    listen: {}
+    row: 12
+    col: 11
+    width: 10
     height: 7
   filters:
   - name: Operación
