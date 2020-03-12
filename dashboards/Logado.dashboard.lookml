@@ -67,13 +67,3 @@
     explore: nivel_1_1
     listens_to_filters: [Intervalo fecha, Operación]
     field: system.namet
-  - name: Tipo de Error
-    title: Tipo de Error
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    model: modelo_vodafone
-    explore: nivel_3
-    listens_to_filters: [Operación]
-    field: nivel_3.tipo_error
