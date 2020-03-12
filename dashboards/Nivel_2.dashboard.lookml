@@ -24,7 +24,7 @@
     row: 12
     col: 0
     width: 11
-    height: 2
+    height: 1
   - name: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
     type: text
     title_text: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
@@ -246,7 +246,7 @@
     row: 4
     col: 0
     width: 11
-    height: 2
+    height: 1
   - title: Histórico de ejecuciones
     name: Histórico de ejecuciones
     model: modelo_vodafone
@@ -320,7 +320,7 @@
     row: 4
     col: 11
     width: 13
-    height: 2
+    height: 1
   - name: Top-5 Errores funcionales
     title: Top-5 Errores funcionales
     model: modelo_vodafone
@@ -387,7 +387,7 @@
     row: 12
     col: 11
     width: 13
-    height: 2
+    height: 1
   - name: Top-5 Errores técnicos
     title: Top-5 Errores técnicos
     model: modelo_vodafone
