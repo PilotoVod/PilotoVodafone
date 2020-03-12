@@ -312,6 +312,15 @@
     col: 0
     width: 11
     height: 7
+  - name: <b><font color="DimGrey">Top-5 Errores Funcionales</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Top-5 Errores Funcionales</font></b>
+    subtitle_text: ''
+    body_text: ''
+    row: 4
+    col: 11
+    width: 11
+    height: 2
   - name: Top-5 Errores funcionales
     title: Top-5 Errores funcionales
     model: modelo_vodafone
@@ -470,12 +479,3 @@
     explore: nivel_1_1
     listens_to_filters: [Intervalo fecha, Operación]
     field: system.namet
-  - name: <b><font color="DimGrey">Top5 Errores Funcionales</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Top-5 Errores Funcionales</font></b>
-    subtitle_text: ''
-    body_text: ''
-    row: 4
-    col: 11
-    width: 11
-    height: 2
