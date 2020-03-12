@@ -49,4 +49,24 @@ view: logado {
     type: count
     drill_fields: []
   }
+
+  measure: TotalOK {
+    type: sum
+    sql: ${TABLE}.Cuenta_de_IDEVENT ;;
+    drill_fields: []
+    filters: {
+      field:  tipo_error
+      value: "OK"
+    }
+  }
+
+  measure: TotalKO_T {
+    type: sum
+    sql: ${TABLE}.Cuenta_de_IDEVENT ;;
+    drill_fields: []
+    filters: {
+      field:  tipo_error
+      value: "KO-T"
+    }
+  }
 }
