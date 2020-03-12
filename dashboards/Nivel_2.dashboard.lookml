@@ -378,13 +378,13 @@
     row: 6
     col: 11
     width: 10
-    height: 8
+    height: 6
   - name: <b><font color="DimGrey">Top-5 Errores Técnicos</font></b>
     type: text
     title_text: <b><font color="DimGrey">Top-5 Errores Técnicos</font></b>
     subtitle_text: ''
     body_text: ''
-    row: 14
+    row: 12
     col: 11
     width: 11
     height: 2
@@ -446,7 +446,7 @@
     row: 14
     col: 11
     width: 10
-    height: 7
+    height: 6
   filters:
   - name: Operación
     title: Operación
