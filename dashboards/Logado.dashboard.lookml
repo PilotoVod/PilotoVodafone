@@ -1,5 +1,5 @@
-- dashboard: logado
-  title: Logado
+- dashboard: logado_imported
+  title: Logado (imported)
   layout: newspaper
   embed_style:
     background_color: "#fcffff"
@@ -33,10 +33,27 @@
     body_text: ''
     row: 4
     col: 0
-    width: 11
+    width: 14
+    height: 2
+  - name: <b><font color="DimGrey">Disponibilidad técnica</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Disponibilidad técnica</font></b>
+    subtitle_text: ''
+    body_text: ''
+    row: 4
+    col: 14
+    width: 10
     height: 1
-  - name: Tiempo medio (segundos)
-    title: Tiempo medio (segundos)
+  - name: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
+    body_text: ''
+    row: 9
+    col: 14
+    width: 10
+    height: 1
+  - title: Tiempo medio (segundos)
+    name: Tiempo medio (segundos)
     model: modelo_vodafone
     explore: logado
     type: Burbuja
@@ -102,82 +119,17 @@
     note_display: hover
     note_text: Este gráfico muestra un máximo de 10 segundos. A partir de ese valor,
       se envía una alerta por e-mail.
+    title_hidden: true
     listen:
       Intervalo fecha: logado.fecha_date
       Tipo cliente: client_type.namet
       Sistema: system.namet
-    row: 4
+    row: 6
     col: 0
     width: 14
-    height: 9
-  - name: <b><font color="DimGrey">Disponibilidad técnica</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Disponibilidad técnica</font></b>
-    subtitle_text: ''
-    body_text: ''
-    row: 4
-    col: 11
-    width: 13
-    height: 1
-  - name: Disponibilidad técnica
-    title: Disponibilidad técnica
-    model: modelo_vodafone
-    explore: logado
-    type: single_value
-    fields: [logado.TotalOK, logado.cuenta_de_idevent]
-    filters: {}
-    limit: 500
-    column_limit: 50
-    dynamic_fields: [{table_calculation: disponibilidad_tecnica, label: Disponibilidad
-          técnica, expression: "${logado.TotalOK}/${logado.cuenta_de_idevent}", value_format: !!null '',
-        value_format_name: percent_2, _kind_hint: measure, _type_hint: number}]
-    query_timezone: America/Los_Angeles
-    custom_color_enabled: true
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: progress_percentage
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#3EB0D5",
-        font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
-          palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825}, bold: false, italic: false,
-        strikethrough: false, fields: !!null ''}]
-    series_types: {}
-    defaults_version: 1
-    show_view_names: false
-    show_row_numbers: true
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: white
-    limit_displayed_rows: false
-    header_text_alignment: left
-    header_font_size: 12
-    rows_font_size: 12
-    hidden_fields: [logado.TotalOK, logado.cuenta_de_idevent]
-    listen:
-      Intervalo fecha: logado.fecha_date
-      Tipo cliente: client_type.namet
-      Sistema: system.namet
-    row: 4
-    col: 14
-    width: 10
-    height: 4
-  - name: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
-    body_text: ''
-    row: 12
-    col: 0
-    width: 11
-    height: 1
-  - name: Errores técnicos frente a total
-    title: Errores técnicos frente a total
+    height: 8
+  - title: Errores técnicos frente a total
+    name: Errores técnicos frente a total
     model: modelo_vodafone
     explore: logado
     type: looker_bar
@@ -240,14 +192,63 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [logado.cuenta_de_idevent]
+    title_hidden: true
     listen:
       Intervalo fecha: logado.fecha_date
       Tipo cliente: client_type.namet
       Sistema: system.namet
-    row: 8
+    row: 11
     col: 14
     width: 10
     height: 5
+  - title: Disponibilidad técnica
+    name: Disponibilidad técnica
+    model: modelo_vodafone
+    explore: logado
+    type: single_value
+    fields: [logado.TotalOK, logado.cuenta_de_idevent]
+    limit: 500
+    column_limit: 50
+    dynamic_fields: [{table_calculation: disponibilidad_tecnica, label: Disponibilidad
+          técnica, expression: "${logado.TotalOK}/${logado.cuenta_de_idevent}", value_format: !!null '',
+        value_format_name: percent_2, _kind_hint: measure, _type_hint: number}]
+    query_timezone: America/Los_Angeles
+    custom_color_enabled: true
+    show_single_value_title: false
+    show_comparison: false
+    comparison_type: progress_percentage
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#3EB0D5",
+        font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
+          palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825}, bold: false, italic: false,
+        strikethrough: false, fields: !!null ''}]
+    series_types: {}
+    defaults_version: 1
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    header_text_alignment: left
+    header_font_size: 12
+    rows_font_size: 12
+    hidden_fields: [logado.TotalOK, logado.cuenta_de_idevent]
+    listen:
+      Intervalo fecha: logado.fecha_date
+      Tipo cliente: client_type.namet
+      Sistema: system.namet
+    row: 6
+    col: 14
+    width: 10
+    height: 3
   filters:
   - name: Intervalo fecha
     title: Intervalo fecha
