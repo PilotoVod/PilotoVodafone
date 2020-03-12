@@ -12,9 +12,16 @@ view: logado {
     sql: ${TABLE}.Cuenta_de_IDEVENT ;;
   }
 
-  dimension: fecha {
-    type: number
-    sql: ${TABLE}.FECHA ;;
+  #dimension: fecha {
+  #  type: number
+  #  sql: ${TABLE}.FECHA ;;
+  #}
+
+  dimension_group: fecha {
+    type: time
+    #timeframes: [date, week, month, year]
+    datatype: yyyymmdd
+    sql: ${TABLE}.FECHA;;
   }
 
   dimension: idoperation {
