@@ -319,7 +319,7 @@
     body_text: ''
     row: 4
     col: 11
-    width: 15
+    width: 13
     height: 2
   - name: Top-5 Errores funcionales
     title: Top-5 Errores funcionales
@@ -377,7 +377,7 @@
     listen: {}
     row: 6
     col: 11
-    width: 15
+    width: 13
     height: 6
   - name: <b><font color="DimGrey">Top-5 Errores Técnicos</font></b>
     type: text
@@ -386,7 +386,7 @@
     body_text: ''
     row: 12
     col: 11
-    width: 15
+    width: 13
     height: 2
   - name: Top-5 Errores técnicos
     title: Top-5 Errores técnicos
@@ -445,7 +445,7 @@
     listen: {}
     row: 14
     col: 11
-    width: 15
+    width: 13
     height: 7
   filters:
   - name: Operación
