@@ -17,17 +17,9 @@
     col: 0
     width: 5
     height: 4
-  - name: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
+  - name: <b><font color="DimGrey" size="7">Detalle de operación y errores</font></b>
     type: text
-    title_text: <b><font color="DimGrey">Histórico de ejecuciones</font></b>
-    body_text: ''
-    row: 12
-    col: 0
-    width: 11
-    height: 1
-  - name: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
-    type: text
-    title_text: <b><font color="DimGrey" size="7">Resumen de la operación</font></b>
+    title_text: <b><font color="DimGrey" size="7">Detalle de operación y errores</font></b>
     subtitle_text: ''
     body_text: ''
     row: 0
