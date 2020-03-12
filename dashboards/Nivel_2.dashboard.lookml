@@ -366,7 +366,7 @@
     hidden_fields: []
     title_hidden: true
     listen: {}
-    row: 4
+    row: 6
     col: 11
     width: 10
     height: 8
@@ -470,3 +470,12 @@
     explore: nivel_1_1
     listens_to_filters: [Intervalo fecha, Operación]
     field: system.namet
+  - name: <b><font color="DimGrey">Resumen día actual</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
+    subtitle_text: No afectado por el filtro de intervalo de fechas
+    body_text: ''
+    row: 4
+    col: 11
+    width: 11
+    height: 2
