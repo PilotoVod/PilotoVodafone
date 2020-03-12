@@ -470,10 +470,9 @@
     explore: nivel_1_1
     listens_to_filters: [Intervalo fecha, Operación]
     field: system.namet
-  - name: <b><font color="DimGrey">Resumen día actual</font></b>
+  - name: <b><font color="DimGrey">Top-5 de errores funcionales</font></b>
     type: text
-    title_text: <b><font color="DimGrey">Resumen día actual</font></b>
-    subtitle_text: No afectado por el filtro de intervalo de fechas
+    title_text: <b><font color="DimGrey">Top-5 de errores funcionales</font></b>
     body_text: ''
     row: 4
     col: 11
