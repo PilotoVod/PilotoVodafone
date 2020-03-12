@@ -7,9 +7,9 @@ view: logado {
   }
 
   measure: cuenta_de_idevent {
-    type: number
-    value_format_name: id
+    type: sum
     sql: ${TABLE}.Cuenta_de_IDEVENT ;;
+    drill_fields: []
   }
 
   #dimension: fecha {
@@ -35,8 +35,9 @@ view: logado {
   }
 
   measure: suma_de_length {
-    type: number
+    type: sum
     sql: ${TABLE}.Suma_de_LENGTH ;;
+    drill_fields: []
   }
 
   dimension: tipo_error {
