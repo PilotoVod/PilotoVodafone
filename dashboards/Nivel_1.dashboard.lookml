@@ -9,99 +9,6 @@
     tile_text_color: "#000000"
     text_tile_text_color: "#ffffff"
   elements:
-  - title: Estado de Operaciones
-    name: Estado de Operaciones
-    model: modelo_vodafone
-    explore: nivel_1_1
-    type: looker_grid
-    fields: [operation.namet, nivel_1_1.ConteoTotal, nivel_1_1.Conteo_KO_F, nivel_1_1.Conteo_KO_T]
-    sorts: [nivel_1_1.ConteoTotal desc]
-    limit: 500
-    dynamic_fields: [{table_calculation: ko_funcional_frente_a_total_de_operaciones,
-        label: KO Funcional frente a Total de operaciones, expression: 'if(${nivel_1_1.Conteo_KO_F}/${nivel_1_1.ConteoTotal}>0.20,"🔴",if(${nivel_1_1.Conteo_KO_F}/${nivel_1_1.ConteoTotal}>0.15,"🟡","🟢"))',
-        value_format: !!null '', value_format_name: !!null '', _kind_hint: measure,
-        _type_hint: string}, {table_calculation: ko_tecnico_frente_a_total_de_operaciones,
-        label: KO Técnico frente a Total de operaciones, expression: 'if(${nivel_1_1.Conteo_KO_T}/${nivel_1_1.ConteoTotal}>0.20,"🔴",if(${nivel_1_1.Conteo_KO_T}/${nivel_1_1.ConteoTotal}>0.15,"🟡","🟢"))',
-        value_format: !!null '', value_format_name: !!null '', _kind_hint: measure,
-        _type_hint: string}]
-    query_timezone: America/Los_Angeles
-    show_view_names: true
-    show_row_numbers: false
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: editable
-    limit_displayed_rows: true
-    enable_conditional_formatting: true
-    header_text_alignment: center
-    header_font_size: '14'
-    rows_font_size: '12'
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    color_application:
-      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
-    show_sql_query_menu_options: false
-    show_totals: true
-    show_row_totals: true
-    series_labels:
-      operation.namet: OPERACION
-      ko_funcional_frente_a_total_de_operaciones: KO Funcional
-      ko_tecnico_frente_a_total_de_operaciones: KO Técnico
-    series_column_widths: {}
-    series_text_format:
-      operation.namet:
-        fg_color: "#000000"
-        align: left
-      ko_funcional_frente_a_total_de_operaciones:
-        align: center
-      ko_tecnico_frente_a_total_de_operaciones:
-        align: center
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    header_font_color: "#000000"
-    header_background_color: "#ffd2d2"
-    conditional_formatting: []
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    legend_position: center
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: desc
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    defaults_version: 1
-    hidden_fields: [nivel_1_1.ConteoTotal, nivel_1_1.Conteo_KO_F, nivel_1_1.Conteo_KO_T]
-    listen:
-      Intervalo fecha: nivel_1_1.fecha_date
-      Tipo cliente: client_type.namet
-      Sistema: system.namet
-    row: 4
-    col: 0
-    width: 10
-    height: 6
   - name: ''
     type: text
     body_text: <img src="https://www.4gdekking.nl/wp-content/uploads/2014/10/vodafone_logo-300x120.jpg"
@@ -193,6 +100,99 @@
     col: 10
     width: 14
     height: 10
+  - title: Estado de Operaciones
+    name: Estado de Operaciones
+    model: modelo_vodafone
+    explore: nivel_1_1
+    type: looker_grid
+    fields: [operation.namet, nivel_1_1.ConteoTotal, nivel_1_1.Conteo_KO_F, nivel_1_1.Conteo_KO_T]
+    sorts: [nivel_1_1.ConteoTotal desc]
+    limit: 500
+    dynamic_fields: [{table_calculation: ko_funcional_frente_a_total_de_operaciones,
+        label: KO Funcional frente a Total de operaciones, expression: 'if(${nivel_1_1.Conteo_KO_F}/${nivel_1_1.ConteoTotal}>0.20,"🔴",if(${nivel_1_1.Conteo_KO_F}/${nivel_1_1.ConteoTotal}>0.15,"🟡","🟢"))',
+        value_format: !!null '', value_format_name: !!null '', _kind_hint: measure,
+        _type_hint: string}, {table_calculation: ko_tecnico_frente_a_total_de_operaciones,
+        label: KO Técnico frente a Total de operaciones, expression: 'if(${nivel_1_1.Conteo_KO_T}/${nivel_1_1.ConteoTotal}>0.20,"🔴",if(${nivel_1_1.Conteo_KO_T}/${nivel_1_1.ConteoTotal}>0.15,"🟡","🟢"))',
+        value_format: !!null '', value_format_name: !!null '', _kind_hint: measure,
+        _type_hint: string}]
+    query_timezone: America/Los_Angeles
+    show_view_names: true
+    show_row_numbers: false
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: editable
+    limit_displayed_rows: true
+    enable_conditional_formatting: true
+    header_text_alignment: center
+    header_font_size: '14'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    color_application:
+      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
+      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    series_labels:
+      operation.namet: OPERACION
+      ko_funcional_frente_a_total_de_operaciones: Funcional
+      ko_tecnico_frente_a_total_de_operaciones: Técnico
+    series_column_widths: {}
+    series_text_format:
+      operation.namet:
+        fg_color: "#000000"
+        align: left
+      ko_funcional_frente_a_total_de_operaciones:
+        align: center
+      ko_tecnico_frente_a_total_de_operaciones:
+        align: center
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    header_font_color: "#000000"
+    header_background_color: "#ffd2d2"
+    conditional_formatting: []
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: desc
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    series_types: {}
+    defaults_version: 1
+    hidden_fields: [nivel_1_1.ConteoTotal, nivel_1_1.Conteo_KO_F, nivel_1_1.Conteo_KO_T]
+    listen:
+      Intervalo fecha: nivel_1_1.fecha_date
+      Tipo cliente: client_type.namet
+      Sistema: system.namet
+    row: 4
+    col: 0
+    width: 10
+    height: 6
   - name: Leyenda
     title: Leyenda
     model: modelo_vodafone
@@ -225,9 +225,9 @@
     show_totals: true
     show_row_totals: true
     series_labels:
-      leyenda.verde: "\U0001f534"
+      leyenda.verde: "\U0001f7e2"
       leyenda.amarillo: "\U0001f7e1"
-      leyenda.rojo: "\U0001f7e2"
+      leyenda.rojo: "\U0001f534"
     series_text_format:
       leyenda.error:
         fg_color: "#000000"
@@ -269,6 +269,11 @@
     totals_color: "#808080"
     defaults_version: 1
     series_types: {}
+    note_state: collapsed
+    note_display: hover
+    note_text: Porcentajes referidos a errores técnicos/funcionales frente al total
+      de ejecuciones de la operación.
+    listen: {}
     row: 10
     col: 0
     width: 10
