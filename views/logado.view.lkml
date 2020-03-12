@@ -6,7 +6,7 @@ view: logado {
     sql: ${TABLE}.CLIENTTYPE ;;
   }
 
-  dimension: cuenta_de_idevent {
+  measure: cuenta_de_idevent {
     type: number
     value_format_name: id
     sql: ${TABLE}.Cuenta_de_IDEVENT ;;
@@ -34,7 +34,7 @@ view: logado {
     sql: ${TABLE}.IDSYSTEM ;;
   }
 
-  dimension: suma_de_length {
+  measure: suma_de_length {
     type: number
     sql: ${TABLE}.Suma_de_LENGTH ;;
   }
