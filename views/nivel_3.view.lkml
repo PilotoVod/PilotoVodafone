@@ -22,7 +22,7 @@ view: nivel_3 {
   }
 
   dimension: idevent {
-    type: number
+    type: string
     sql: ${TABLE}.IDEVENT ;;
   }
 
