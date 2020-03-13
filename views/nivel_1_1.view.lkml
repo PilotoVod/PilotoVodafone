@@ -83,4 +83,9 @@ view: nivel_1_1 {
       value: "KO-F"
     }
   }
+
+  measure: NTiposdeSistema {
+    type: count_distinct
+    sql: ${TABLE}.IDSYSTEM ;;
+  }
 }
