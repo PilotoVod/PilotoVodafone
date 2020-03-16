@@ -35,7 +35,7 @@ view: client_type {
     sql: ${TABLE}.NAMET ;;
   }
 
-  measure: count {
+  measure: TotalTipoCliente {
     type: sum
     drill_fields: []
     sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
