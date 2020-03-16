@@ -69,4 +69,9 @@ view: logado {
       value: "KO-T"
     }
   }
+
+  measure: DispTec {
+    type: number
+    sql:  100*${logado.TotalOK}/${logado.cuenta_de_idevent} ;;
+  }
 }
