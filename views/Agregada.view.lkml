@@ -14,8 +14,10 @@ view: agregada {
   }
 
   measure: NEjecuciones {
-    type: count
-    #sql: ${TABLE}.IDSYSTEM ;;
+    type: sum
+    sql: ${TABLE}.Total ;;
+    drill_fields: []
   }
+
 
   }
