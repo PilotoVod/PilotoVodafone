@@ -114,7 +114,7 @@ explore: nivel_3 {
   }
 
   join:  agregada{
-    view_label: "Dimensión sistema"
+    view_label: "Datos agregados"
     relationship: many_to_one
     sql_on: ${agregada.idoperation} = ${nivel_3.idoperation} and ${agregada.fecha_date} = ${nivel_3.initdate_date};;
   }
