@@ -19,5 +19,12 @@ view: agregada {
     drill_fields: []
   }
 
+  dimension: id {
+    type: string
+    sql: ${TABLE}.IDOPERATION || ${TABLE}.FECHA;;
+    primary_key: yes
+    hidden: yes
+  }
+
 
   }
