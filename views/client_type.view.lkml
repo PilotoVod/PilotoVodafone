@@ -36,22 +36,10 @@ view: client_type {
     sql: ${TABLE}.NAMET ;;
   }
 
-  measure: count {
+  measure: nclientes {
     type: count
     drill_fields: []
   }
 
-  measure: TotalTipoCliente {
-    type: sum
-    hidden: no
-    drill_fields: []
-    sql: (SELECT COUNT(distinct  ${TABLE}.idclienttype) FROM pilotovodafone1.ClientType) ;;
 
-  }
-
-  measure: conteo {
-    type: count_distinct
-    sql:  ${TABLE}.idclienttype ;;
-    drill_fields: []
-  }
 }

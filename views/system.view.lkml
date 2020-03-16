@@ -23,6 +23,7 @@ view: system {
   dimension: idsystem {
     type: number
     sql: ${TABLE}.IDSYSTEM ;;
+    primary_key: yes
   }
 
   dimension_group: lastupdatedate {
@@ -44,7 +45,7 @@ view: system {
     sql: ${TABLE}.NAMET ;;
   }
 
-  measure: count {
+  measure: nsistemas {
     type: count
     drill_fields: []
   }
