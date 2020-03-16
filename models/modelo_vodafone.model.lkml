@@ -77,7 +77,7 @@ explore: nivel_1_1 {
     relationship: many_to_many
   }
 
-  join: Totales {
+  join: totales {
     view_label: "Totales"
     type: cross
     relationship: many_to_many

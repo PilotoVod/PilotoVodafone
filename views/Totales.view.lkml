@@ -1,4 +1,4 @@
-view: Totales {
+view: totales {
   #sql_table_name: pilotovodafone1.ClientType ;;
 
   measure: NTotalCliente {
