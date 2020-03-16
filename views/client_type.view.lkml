@@ -36,7 +36,9 @@ view: client_type {
   }
 
   measure: count {
-    type: count
+    type: sum
     drill_fields: []
+    sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
+
   }
 }
