@@ -14,8 +14,8 @@ view: agregada {
   }
 
   measure: NEjecuciones {
-    type: count_distinct
-    sql: ${TABLE}.IDSYSTEM ;;
+    type: count
+    #sql: ${TABLE}.IDSYSTEM ;;
   }
 
   }
