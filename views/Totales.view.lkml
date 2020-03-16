@@ -1,5 +1,5 @@
 view: totales {
-  sql_table_name: pilotovodafone1.ClientType ;;
+  #sql_table_name: pilotovodafone1.ClientType ;;
 
   dimension: id {
     type: number
