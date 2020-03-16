@@ -77,6 +77,12 @@ explore: nivel_1_1 {
     relationship: many_to_many
   }
 
+  join: totaltipocliente {
+    view_label: "Total Tipo Cliente"
+    type: cross
+    relationship: many_to_many
+  }
+
 }
 
 explore: nivel_3 {
