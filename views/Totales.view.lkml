@@ -1,6 +1,12 @@
 view: totales {
   sql_table_name: pilotovodafone1.ClientType ;;
 
+  dimension: id {
+    type: number
+    sql: 1 ;;
+    primary_key: yes
+  }
+
   measure: NTotalCliente {
     type: count_distinct
     sql:  ${TABLE}.idclienttype ;;
