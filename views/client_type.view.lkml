@@ -37,6 +37,7 @@ view: client_type {
 
   measure: TotalTipoCliente {
     type: sum
+    hidden: no
     drill_fields: []
     sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
 
