@@ -90,10 +90,7 @@ view: nivel_3 {
     drill_fields: [username]
   }
 
-  dimension: ID {
-    type: string
-    sql: ${TABLE}.INITDATE || ${TABLE}.IDOPERATION ;;
-   # primary_key: yes
 
-  }
+
+
 }
