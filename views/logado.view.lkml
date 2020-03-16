@@ -71,7 +71,7 @@ view: logado {
   }
 
   measure: DispTec {
-    type: percent_of_total
+    type: number
     sql:  ${logado.TotalOK}/${logado.cuenta_de_idevent} ;;
   }
 }
