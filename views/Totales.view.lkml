@@ -2,9 +2,9 @@ view: totales {
   sql_table_name: pilotovodafone1.ClientType ;;
 
   measure: NTotalCliente {
-    type: sum
-    #sql:  ${TABLE}.idclienttype ;;
-    sql: (SELECT COUNT(distinct  idclienttype) FROM pilotovodafone1.ClientType) ;;
+    type: count_distinct
+    sql:  ${TABLE}.idclienttype ;;
+    #sql: (SELECT COUNT(distinct  idclienttype) FROM pilotovodafone1.ClientType) ;;
     drill_fields: []
   }
 
