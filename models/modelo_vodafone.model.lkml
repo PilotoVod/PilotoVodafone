@@ -112,6 +112,12 @@ explore: nivel_3 {
     type: cross
     relationship: many_to_many
   }
+
+  join:  agregada{
+    view_label: "Datos agregados"
+    relationship: many_to_one
+    sql_on: ${agregada.idoperation} = ${nivel_3.idoperation} and ${agregada.fecha_date} = ${nivel_3.initdate_date};;
+  }
 }
 
 #explore: operation {
