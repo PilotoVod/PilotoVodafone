@@ -11,6 +11,7 @@ view: agregada {
   dimension: idoperation {
     type: string
     sql: ${TABLE}.IDOPERATION ;;
+    primary_key: yes
   }
 
   measure: NEjecuciones {
