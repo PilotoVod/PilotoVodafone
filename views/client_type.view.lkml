@@ -36,6 +36,11 @@ view: client_type {
     sql: ${TABLE}.NAMET ;;
   }
 
+  measure: count {
+    type: count
+    drill_fields: []
+  }
+
   measure: TotalTipoCliente {
     type: sum
     hidden: no
@@ -46,6 +51,7 @@ view: client_type {
 
   measure: conteo {
     type: count_distinct
+    sql:  ${TABLE}.idclienttype ;;
     drill_fields: []
   }
 }
