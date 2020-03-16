@@ -42,4 +42,10 @@ view: client_type {
     sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
 
   }
+
+  measure: conteo {
+    type: count_distinct
+    sql: ${TABLE}.idclienttype ;;
+    drill_fields: []
+  }
 }
