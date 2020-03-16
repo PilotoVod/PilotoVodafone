@@ -23,6 +23,7 @@ view: client_type {
   dimension: idclienttype {
     type: number
     sql: ${TABLE}.IDCLIENTTYPE ;;
+    primary_key: yes
   }
 
   dimension: lastupdatedate {
