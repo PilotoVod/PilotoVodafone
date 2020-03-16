@@ -106,6 +106,12 @@ explore: nivel_3 {
     relationship: many_to_one
     sql_on: ${system.idsystem} = ${nivel_3.idsystem} ;;
   }
+
+  join: totales {
+    view_label: "Totales"
+    type: cross
+    relationship: many_to_many
+  }
 }
 
 #explore: operation {
