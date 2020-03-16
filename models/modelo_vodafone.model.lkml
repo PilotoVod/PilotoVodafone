@@ -116,7 +116,7 @@ explore: nivel_3 {
   join:  agregada{
     view_label: "Datos agregados"
     relationship: many_to_one
-    sql_on: ${agregada.idoperation} = ${nivel_3.idoperation} and ${agregada.fecha_date} = ${nivel_3.initdate_date};;
+    sql_on: ${agregada.ID} = ${nivel_3.ID} ;;
   }
 }
 

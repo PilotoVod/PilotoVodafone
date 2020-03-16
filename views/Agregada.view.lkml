@@ -11,7 +11,6 @@ view: agregada {
   dimension: idoperation {
     type: string
     sql: ${TABLE}.IDOPERATION ;;
-    primary_key: yes
   }
 
   measure: NEjecuciones {
@@ -20,5 +19,11 @@ view: agregada {
     drill_fields: []
   }
 
+  dimension: ID {
+    type: string
+    sql: ${TABLE}.FECHA || ${TABLE}.IDOPERATION ;;
+    primary_key: yes
+
+  }
 
   }
