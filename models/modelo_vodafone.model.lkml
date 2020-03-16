@@ -77,8 +77,8 @@ explore: nivel_1_1 {
     relationship: many_to_many
   }
 
-  join: totaltipocliente {
-    view_label: "Total Tipo Cliente"
+  join: Totales {
+    view_label: "Totales"
     type: cross
     relationship: many_to_many
   }
