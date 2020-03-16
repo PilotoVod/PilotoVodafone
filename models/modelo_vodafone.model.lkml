@@ -113,11 +113,6 @@ explore: nivel_3 {
     relationship: many_to_many
   }
 
-  join:  agregada{
-    view_label: "Datos agregados"
-    relationship: many_to_one
-    sql_on: ${agregada.ID} = ${nivel_3.ID} ;;
-  }
 }
 
 #explore: operation {
