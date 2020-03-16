@@ -40,13 +40,12 @@ view: client_type {
     type: sum
     hidden: no
     drill_fields: []
-    sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
+    sql: (SELECT COUNT(distinct  ${TABLE}.idclienttype) FROM pilotovodafone1.ClientType) ;;
 
   }
 
   measure: conteo {
-    type: sum
-    sql: (SELECT COUNT(*) FROM pilotovodafone1.ClientType) ;;
+    type: count_distinct
     drill_fields: []
   }
 }
