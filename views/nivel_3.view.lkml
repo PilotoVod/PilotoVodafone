@@ -1,13 +1,6 @@
 view: nivel_3 {
-  #sql_table_name: pilotovodafone1.Nivel_3 ;;
-derived_table: {
-  sql: select IDEVENT, IDSESSION, IDEXTERNALSESSION, IDACTION, CLIENTTYPE, IDOPERATION, OBJECTVAL, USERNAME, STATE, DESC_ERROR, TIPO_ERROR, INITDATE, LENGTH, FRONTERROR, IDSYSTEM
-  from pilotovodafone1.Nivel_3
-        UNION ALL
-        select IDEVENT, IDSESSION, IDEXTERNALSESSION, IDACTION, CLIENTTYPE, IDOPERATION, OBJECTVAL, USERNAME, STATE, DESC_ERROR, TIPO_ERROR, INITDATE, LENGTH, FRONTERROR, IDSYSTEM
-        from pilotovodafone1.Nivel_3_OK_1
-        ;;
-}
+  sql_table_name: pilotovodafone1.Nivel_3 ;;
+
   dimension: clienttype {
     type: number
     sql: ${TABLE}.CLIENTTYPE ;;
@@ -93,11 +86,11 @@ derived_table: {
     sql: ${TABLE}.USERNAME ;;
   }
 
-  measure: NTotal {
-    type: max
-    sql: (SELECT COUNT(state) FROM ${TABLE});;
-
-  }
+ # measure: NTotal {
+  #  type: max
+   # sql: (SELECT COUNT(state) FROM ${TABLE});;
+#
+ # }
 
   measure: count {
     type: count
