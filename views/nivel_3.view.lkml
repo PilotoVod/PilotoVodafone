@@ -80,7 +80,7 @@ derived_table: {
   dimension: state {
     type: string
     sql: ${TABLE}.STATE ;;
-    skip_drill_filter:  yes
+    #skip_drill_filter:  yes
   }
 
   dimension: tipo_error {
