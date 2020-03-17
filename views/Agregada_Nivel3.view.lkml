@@ -20,7 +20,7 @@ view: agregada_nivel3 {
 
 
   measure: NTotal {
-    type: count
+    type: max
     drill_fields: []
 
   }
