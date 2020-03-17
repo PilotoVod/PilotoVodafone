@@ -73,6 +73,7 @@ view: nivel_3 {
   dimension: state {
     type: string
     sql: ${TABLE}.STATE ;;
+    skip_drill_filter:  yes
   }
 
   dimension: tipo_error {
@@ -85,9 +86,25 @@ view: nivel_3 {
     sql: ${TABLE}.USERNAME ;;
   }
 
+  measure: NTotal {
+    type: count
+    drill_fields: []
+
+  }
+
   measure: count {
     type: count
-    drill_fields: [username]
+    drill_fields: []
+
+  }
+
+  measure: NTotalError {
+    type: count
+    drill_fields: []
+    filters: {
+      field:  tipo_error
+      value: "KO-T, KO-F"}
+
   }
 
 
