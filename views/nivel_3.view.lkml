@@ -94,7 +94,7 @@ derived_table: {
   }
 
   measure: NTotal {
-    type: sum
+    type: max
     sql: (SELECT COUNT(state) FROM ${TABLE});;
 
   }
