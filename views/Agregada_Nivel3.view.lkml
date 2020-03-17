@@ -12,6 +12,7 @@ view: agregada_nivel3 {
   dimension: idoperation {
     type: number
     sql: ${TABLE}.IDOPERATION ;;
+    primary_key: yes
   }
 
 
