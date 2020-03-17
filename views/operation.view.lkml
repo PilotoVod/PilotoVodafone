@@ -26,7 +26,7 @@ view: operation {
     sql: ${TABLE}.NAMET ;;
     link: {
       label: "Ir al Nivel 3 de Excelencia Operativa"
-      url: "https://minsait.eu.looker.com/dashboards/21?Operación={{value}}"
+      url: "https://minsait.eu.looker.com/dashboards/21?Operación={{value}>}<button>Ir al Nivel 3 de Excelencia Operativa</button></a>"
       icon_url: "https://looker.com/favicon.ico"
     }
   }
