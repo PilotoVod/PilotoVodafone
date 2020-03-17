@@ -113,6 +113,13 @@ explore: nivel_3 {
     relationship: many_to_many
   }
 
+  join: agregada_nivel3 {
+    view_label: "Agregada total"
+    type: inner
+    relationship: many_to_one
+    sql_on: ${agregada_nivel3.idoperation} = ${nivel_3.idoperation} ;;
+  }
+
 }
 
 #explore: operation {
