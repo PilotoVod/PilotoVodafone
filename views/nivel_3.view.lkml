@@ -1,6 +1,11 @@
 view: nivel_3 {
-  sql_table_name: pilotovodafone1.Nivel_3 ;;
-
+  #sql_table_name: pilotovodafone1.Nivel_3 ;;
+derived_table: {
+  sql: select * from pilotovodafone1.Nivel_3
+        UNION
+        select * from pilotovodafone1.Nivel_3_1
+        ;;
+}
   dimension: clienttype {
     type: number
     sql: ${TABLE}.CLIENTTYPE ;;
