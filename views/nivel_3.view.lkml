@@ -1,9 +1,9 @@
 view: nivel_3 {
   #sql_table_name: pilotovodafone1.Nivel_3 ;;
 derived_table: {
-  sql: select * from pilotovodafone1.Nivel_3
+  sql: select IDEVENT, IDSESSION, IDEXTERNALSESSION, IDACTION, CLIENTTYPE, IDOPERATION, OBJECTVAL, USERNAME, STATE, DESC_ERROR, TIPO_ERROR, INITDATE, LENGTH, FRONTERROR, IDSYSTEM from pilotovodafone1.Nivel_3
         UNION
-        select * from pilotovodafone1.Nivel_3_1
+        select IDEVENT, IDSESSION, IDEXTERNALSESSION, IDACTION, CLIENTTYPE, IDOPERATION, OBJECTVAL, USERNAME, STATE, DESC_ERROR, TIPO_ERROR, INITDATE, LENGTH, FRONTERROR, IDSYSTEM from pilotovodafone1.Nivel_3_1
         ;;
 }
   dimension: clienttype {
