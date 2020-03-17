@@ -80,7 +80,7 @@ derived_table: {
   dimension: state {
     type: string
     sql: ${TABLE}.STATE ;;
-    #skip_drill_filter:  yes
+    skip_drill_filter:  yes
   }
 
   dimension: tipo_error {
@@ -100,7 +100,8 @@ derived_table: {
   }
 
   measure: count {
-    type: count
+    type: count_distinct
+    sql: ${state} ;;
     drill_fields: []
 
   }
