@@ -16,7 +16,7 @@ view: operation {
     sql: ${TABLE}.NAMET ;;
     link: {
       label: "Ir al Nivel 2 de Excelencia Operativa"
-      url: "https://minsait.eu.looker.com/dashboards/20?Operación={{value}}&Intervalo%20fecha={{ _filters['nivel_1_1.Fecha.Date'] | url_encode }}&Tipo%20cliente={{ _filters['client_type.namet'] | url_encode }}&Sistema={{ _filters['system.named'] | url_encode }}"
+      url: "https://minsait.eu.looker.com/dashboards/20?Operación={{value}}&Intervalo%20fecha={{ _filters['nivel_1_1.fecha.Date'] | url_encode }}&Tipo%20cliente={{ _filters['client_type.namet'] | url_encode }}&Sistema={{ _filters['system.namet'] | url_encode }}"
       icon_url: "https://looker.com/favicon.ico"
     }
   }
