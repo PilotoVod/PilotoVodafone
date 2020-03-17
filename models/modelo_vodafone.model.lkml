@@ -117,7 +117,7 @@ explore: nivel_3 {
     view_label: "Agregada total"
     type: inner
     relationship: many_to_one
-    sql_on: ${agregada_nivel3.idoperation}.idoperation} = ${nivel_3.idoperation} ;;
+    sql_on: ${agregada_nivel3.idoperation} = ${nivel_3.idoperation} ;;
   }
 
 }
