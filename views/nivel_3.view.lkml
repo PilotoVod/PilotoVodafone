@@ -94,7 +94,7 @@ view: nivel_3 {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [desc_error]
 
   }
 

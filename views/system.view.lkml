@@ -47,6 +47,6 @@ view: system {
 
   measure: nsistemas {
     type: count
-    drill_fields: []
+    drill_fields: [namet]
   }
 }

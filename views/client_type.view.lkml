@@ -38,7 +38,7 @@ view: client_type {
 
   measure: nclientes {
     type: count
-    drill_fields: []
+    drill_fields: [namet]
   }
 
 
