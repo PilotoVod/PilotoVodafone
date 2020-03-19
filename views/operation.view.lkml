@@ -14,6 +14,8 @@ view: operation {
   dimension: namet {
     type: string
     sql: ${TABLE}.NAMET ;;
+    drill_fields: [description]
+
     link: {
       label: "Ir al Nivel 2 de Excelencia Operativa"
       url: "https://minsait.eu.looker.com/dashboards/20?Operación={{value}}&Tipo%20cliente={{ _filters['client_type.namet'] | url_encode }}&Sistema={{ _filters['system.namet'] | url_encode }}&Intervalo%20fecha={{ _filters['nivel_1_1.fecha_date'] | url_encode }}"
