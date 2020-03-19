@@ -1,4 +1,4 @@
-- dashboard: excelencia_operativa__nivel_3
+- dashboard: excelencia_operativa__nivel_3_modelo
   title: Excelencia Operativa - Nivel 3
   layout: newspaper
   embed_style:

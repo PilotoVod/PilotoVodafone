@@ -1,4 +1,4 @@
-- dashboard: logado
+- dashboard: Logado
   title: Logado
   layout: newspaper
   embed_style:
@@ -17,24 +17,6 @@
     col: 0
     width: 5
     height: 4
-  - name: <b><font color="DimGrey" size="7">Logado</font></b>
-    type: text
-    title_text: <b><font color="DimGrey" size="7">Logado</font></b>
-    subtitle_text: ''
-    body_text: ''
-    row: 0
-    col: 5
-    width: 19
-    height: 4
-  - name: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
-    subtitle_text: No afectado por el filtro de intervalo de fechas
-    body_text: ''
-    row: 4
-    col: 0
-    width: 14
-    height: 2
   - name: <b><font color="DimGrey">Disponibilidad técnica</font></b>
     type: text
     title_text: <b><font color="DimGrey">Disponibilidad técnica</font></b>
@@ -43,91 +25,73 @@
     row: 4
     col: 14
     width: 10
-    height: 1
-  - name: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
-    type: text
-    title_text: <b><font color="DimGrey">Errores técnicos frente al total de operaciones</font></b>
-    body_text: ''
-    row: 9
-    col: 14
-    width: 10
-    height: 1
-  - title: Tiempo medio (segundos)
-    name: Tiempo medio (segundos)
+    height: 2
+  - title: Disponibilidad técnica
+    name: Disponibilidad técnica
     model: modelo_vodafone
     explore: logado
-    type: Burbuja
-    fields: [logado.fecha_date, logado.cuenta_de_idevent, logado.suma_de_length]
-    fill_fields: [logado.fecha_date]
-    sorts: [logado.fecha_date desc]
+    type: single_value
+    fields: [logado.TotalOK, logado.cuenta_de_idevent]
     limit: 500
-    dynamic_fields: [{table_calculation: tiempo_medio, label: Tiempo medio, expression: "(sum(${logado.suma_de_length})/sum(${logado.cuenta_de_idevent}))/1000 ",
-        value_format: !!null '', value_format_name: decimal_2, _kind_hint: measure,
-        _type_hint: number}]
+    column_limit: 50
+    dynamic_fields: [{table_calculation: disponibilidad_tecnica, label: Disponibilidad
+          técnica, expression: "${logado.TotalOK}/${logado.cuenta_de_idevent}", value_format: !!null '',
+        value_format_name: percent_2, _kind_hint: measure, _type_hint: number}]
     query_timezone: America/Los_Angeles
-    hidden_fields: [logado.fecha_date, logado.cuenta_de_idevent, logado.suma_de_length]
-    hidden_points_if_no: []
-    series_labels: {}
-    show_view_names: false
-    showComparison: false
-    minValue: 0
-    maxValue: 10
-    circleThickness: 0.05
-    circleFillGap: 0.05
-    circleColor: "#000000"
-    waveHeight: 0.15
-    waveCount: 10
-    waveRiseTime: 2700
-    waveAnimateTime: 5000
-    waveRise: true
-    waveHeightScaling: true
-    waveAnimate: true
-    waveColor: "#c90d0d"
-    waveOffset: 0
-    textVertPosition: 0.5
-    textSize: 1
-    valueCountUp: true
-    displayPercent: false
-    textColor: "#000000"
-    waveTextColor: "#FFFFFF"
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: ''
-    limit_displayed_rows: false
-    legend_position: center
-    point_style: none
-    show_value_labels: false
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    show_null_points: true
-    interpolation: linear
-    defaults_version: 0
+    custom_color_enabled: true
+    show_single_value_title: false
+    show_comparison: false
+    comparison_type: progress_percentage
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#3EB0D5",
+        font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
+          palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825}, bold: false, italic: false,
+        strikethrough: false, fields: !!null ''}]
     series_types: {}
-    note_state: collapsed
-    note_display: hover
-    note_text: Este gráfico muestra un máximo de 10 segundos. A partir de ese valor,
-      se envía una alerta por e-mail.
-    title_hidden: true
+    defaults_version: 1
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    header_text_alignment: left
+    header_font_size: 12
+    rows_font_size: 12
+    hidden_fields: [logado.TotalOK, logado.cuenta_de_idevent]
     listen:
       Intervalo fecha: logado.fecha_date
       Tipo cliente: client_type.namet
       Sistema: system.namet
     row: 6
+    col: 14
+    width: 10
+    height: 3
+  - name: <b><font color="DimGrey" size="7">Logado (I-EDCLOGADOEMPRESA)</font></b>
+    type: text
+    title_text: <b><font color="DimGrey" size="7">Logado (I-EDCLOGADOEMPRESA)</font></b>
+    subtitle_text: Logado completo de empresas
+    body_text: ''
+    row: 0
+    col: 5
+    width: 19
+    height: 4
+  - name: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
+    type: text
+    title_text: <b><font color="DimGrey">Tiempo medio (en segundos)</font></b>
+    subtitle_text: ''
+    body_text: ''
+    row: 4
     col: 0
     width: 14
-    height: 8
+    height: 2
   - title: Errores técnicos frente a total
     name: Errores técnicos frente a total
     model: modelo_vodafone
@@ -192,68 +156,100 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [logado.cuenta_de_idevent]
+    note_state: collapsed
+    note_display: below
+    note_text: Errores técnicos frente al total de ejecuciones de la operación de
+      logado.
     title_hidden: true
     listen:
       Intervalo fecha: logado.fecha_date
       Tipo cliente: client_type.namet
       Sistema: system.namet
-    row: 11
+    row: 10
     col: 14
     width: 10
     height: 5
-  - title: Disponibilidad técnica
-    name: Disponibilidad técnica
+  - name: Tiempo medio (segundos)
+    title: Tiempo medio (segundos)
     model: modelo_vodafone
     explore: logado
-    type: single_value
-    fields: [logado.TotalOK, logado.cuenta_de_idevent]
+    type: Burbuja
+    fields: [logado.fecha_date, logado.cuenta_de_idevent, logado.suma_de_length]
+    fill_fields: [logado.fecha_date]
+    sorts: [logado.fecha_date desc]
     limit: 500
-    column_limit: 50
-    dynamic_fields: [{table_calculation: disponibilidad_tecnica, label: Disponibilidad
-          técnica, expression: "${logado.TotalOK}/${logado.cuenta_de_idevent}", value_format: !!null '',
-        value_format_name: percent_2, _kind_hint: measure, _type_hint: number}]
+    dynamic_fields: [{table_calculation: tiempo_medio, label: Tiempo medio, expression: "(sum(${logado.suma_de_length})/sum(${logado.cuenta_de_idevent}))/1000 ",
+        value_format: !!null '', value_format_name: decimal_2, _kind_hint: measure,
+        _type_hint: number}]
     query_timezone: America/Los_Angeles
-    custom_color_enabled: true
-    show_single_value_title: false
-    show_comparison: false
-    comparison_type: progress_percentage
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    conditional_formatting: [{type: equal to, value: !!null '', background_color: "#3EB0D5",
-        font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
-          palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825}, bold: false, italic: false,
-        strikethrough: false, fields: !!null ''}]
-    series_types: {}
-    defaults_version: 1
+    hidden_fields: [logado.fecha_date, logado.cuenta_de_idevent, logado.suma_de_length]
+    hidden_points_if_no: []
+    series_labels: {}
     show_view_names: false
-    show_row_numbers: true
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: white
+    showComparison: false
+    minValue: 0
+    maxValue: 10
+    circleThickness: 0.05
+    circleFillGap: 0.05
+    circleColor: "#000000"
+    waveHeight: 0.15
+    waveCount: 10
+    waveRiseTime: 2700
+    waveAnimateTime: 5000
+    waveRise: true
+    waveHeightScaling: true
+    waveAnimate: true
+    waveColor: "#c90d0d"
+    waveOffset: 0
+    textVertPosition: 0.5
+    textSize: 1
+    valueCountUp: true
+    displayPercent: false
+    textColor: "#000000"
+    waveTextColor: "#FFFFFF"
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
     limit_displayed_rows: false
-    header_text_alignment: left
-    header_font_size: 12
-    rows_font_size: 12
-    hidden_fields: [logado.TotalOK, logado.cuenta_de_idevent]
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 0
+    series_types: {}
+    note_state: collapsed
+    note_display: below
+    note_text: Este gráfico muestra un máximo de 10 segundos. A partir de ese valor,
+      se envía una alerta por e-mail.
+    title_hidden: true
     listen:
       Intervalo fecha: logado.fecha_date
       Tipo cliente: client_type.namet
       Sistema: system.namet
     row: 6
-    col: 14
-    width: 10
-    height: 3
+    col: 0
+    width: 14
+    height: 8
   filters:
   - name: Intervalo fecha
     title: Intervalo fecha
     type: field_filter
-    default_value: 2020/02/13 to 2020/02/21
+    default_value: 2020/02/20 to 2020/02/21
     allow_multiple_values: true
     required: false
     model: modelo_vodafone
@@ -278,5 +274,5 @@
     required: false
     model: modelo_vodafone
     explore: nivel_1_1
-    listens_to_filters: [Intervalo fecha, Operación]
+    listens_to_filters: [Intervalo fecha, Operación, Tipo cliente]
     field: system.namet

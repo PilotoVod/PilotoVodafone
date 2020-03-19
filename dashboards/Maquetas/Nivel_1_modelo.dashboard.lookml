@@ -1,4 +1,4 @@
-- dashboard: excelencia_operativa__nivel_1
+- dashboard: excelencia_operativa__nivel_1_modelo
   title: Excelencia Operativa - Nivel 1
   layout: newspaper
   embed_style:
