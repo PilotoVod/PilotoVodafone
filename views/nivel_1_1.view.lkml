@@ -49,12 +49,14 @@ view: nivel_1_1 {
   }
 
   measure: ConteoTotal {
+    label: "Conteo Total"
     type: sum
     sql: ${TABLE}.Total ;;
     drill_fields: []
   }
 
   measure: Conteo_OK {
+    label: "Conteo OK"
     type: sum
     sql: ${TABLE}.Total ;;
     drill_fields: []
@@ -65,6 +67,7 @@ view: nivel_1_1 {
   }
 
   measure: Conteo_KO_T {
+    label: "Conteo KO Técnico"
     type: sum
     sql: ${TABLE}.Total ;;
     drill_fields: []
@@ -75,6 +78,7 @@ view: nivel_1_1 {
   }
 
   measure: Conteo_KO_F {
+    label: "Conteo KO Funcional"
     type: sum
     sql: ${TABLE}.Total ;;
     drill_fields: []
