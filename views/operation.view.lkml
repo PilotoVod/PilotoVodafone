@@ -26,6 +26,7 @@ view: operation {
   }
 
   dimension: namet2 {
+    label: "Tipo de operación"
     type: string
     sql: ${TABLE}.NAMET ;;
     link: {
