@@ -12,6 +12,7 @@ view: operation {
   }
 
   dimension: namet {
+    label: "Tipo de operación"
     type: string
     sql: ${TABLE}.NAMET ;;
     drill_fields: [description]

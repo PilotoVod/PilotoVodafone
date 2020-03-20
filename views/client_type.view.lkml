@@ -32,6 +32,7 @@ view: client_type {
   }
 
   dimension: namet {
+    label: "Tipo de cliente"
     type: string
     sql: ${TABLE}.NAMET ;;
   }

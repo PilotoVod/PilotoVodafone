@@ -41,6 +41,7 @@ view: system {
   }
 
   dimension: namet {
+    label: "Tipo de sistema"
     type: string
     sql: ${TABLE}.NAMET ;;
   }

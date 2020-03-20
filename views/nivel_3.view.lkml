@@ -7,6 +7,7 @@ view: nivel_3 {
   }
 
   dimension: desc_error {
+    label: "Descripción del error"
     type: string
     sql: ${TABLE}.DESC_ERROR ;;
   }
