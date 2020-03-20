@@ -32,18 +32,21 @@ explore: logado {
 
   join: operation {
     view_label: "Dimensión operación"
+    type: inner
     relationship: many_to_one
     sql_on: ${operation.idoperation} = ${logado.idoperation} ;;
   }
 
   join: client_type {
     view_label: "Dimensión tipo cliente"
+    type: inner
     relationship: many_to_one
     sql_on: ${client_type.idclienttype} = ${logado.clienttype} ;;
   }
 
   join:  system{
     view_label: "Dimensión sistema"
+    type: inner
     relationship: many_to_one
     sql_on: ${system.idsystem} = ${logado.idsystem} ;;
   }
