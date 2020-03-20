@@ -52,7 +52,7 @@ view: nivel_1_1 {
     label: "Conteo Total"
     type: sum
     sql: ${TABLE}.Total ;;
-    drill_fields: []
+    drill_fields: [Conteo_OK, Conteo_KO_T, Conteo_KO_F]
   }
 
   measure: Conteo_OK {
