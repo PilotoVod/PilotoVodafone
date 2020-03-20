@@ -2,6 +2,7 @@ view: operation {
   sql_table_name: pilotovodafone1.Operation ;;
 
   dimension: description {
+    label: "Descripción de operación"
     type: string
     sql: ${TABLE}.DESCRIPTION ;;
   }
