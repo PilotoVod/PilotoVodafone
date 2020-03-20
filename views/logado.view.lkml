@@ -8,6 +8,7 @@ view: logado {
 
   measure: cuenta_de_idevent {
     type: sum
+    label: "Total de ejecuciones"
     sql: ${TABLE}.Cuenta_de_IDEVENT ;;
     drill_fields: []
   }
@@ -52,6 +53,7 @@ view: logado {
 
   measure: TotalOK {
     type: sum
+    label: "Total de ejecuciones OK"
     sql: ${TABLE}.Cuenta_de_IDEVENT ;;
     drill_fields: []
     filters: {
@@ -72,6 +74,9 @@ view: logado {
 
   measure: DispTec {
     type: number
+    label: "Disponibilidad Técnica"
+    value_format: "0.00\%"
     sql:  100*${logado.TotalOK}/${logado.cuenta_de_idevent} ;;
+    drill_fields: [TotalOK, cuenta_de_idevent]
   }
 }
